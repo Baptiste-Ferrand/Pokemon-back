@@ -1,0 +1,23 @@
+# Version: 3.1
+version: '3.1'
+services:
+  db:
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_DB: ${POSTGRES_DB}
+    ports:
+      - ${POSTGRES_PORT}:5432
+    volumes:
+      - ./data:/var/lib/postgresql/data
+  backend:
+    image: ghcr.io/baptiste-ferrand/pokemon-back:latest
+    restart: always
+    ports:
+      - ${BACKEND_PORT}:3000
+
+
+volumes:
+  my-db:

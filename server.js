@@ -10,3 +10,6 @@ app.get('/', (req, res) => {
   res.send('Hello World!');
 }
 );
+
+//créer moi la connexion a ma bdd postresql port 5432 avec user postgres et password postgres
+
