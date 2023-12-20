@@ -12,4 +12,3 @@ jobs:
         run: |
           docker login --username baptiste-ferrand --password ${{serects.GH_PAT}} ghcr.io
           docker build . --tag ghcr.io/baptiste-ferrand/pokemon-back-ghcr:latest
-
