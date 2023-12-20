@@ -20,7 +20,12 @@ services:
     restart: always
     ports:
       - ${BACKEND_PORT}:3000
-
+  frontend:
+    container_name: FRONT
+    image: ghcr.io/baptiste-ferrand/pokemon-front:latest
+    restart: always
+    ports:
+      - ${FRONTEND_PORT}:4200
 
 volumes:
   my-db: 
