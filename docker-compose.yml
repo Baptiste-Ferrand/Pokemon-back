@@ -14,13 +14,11 @@ services:
     volumes:
       - my-db:/var/lib/postgresql/data
       - ./config:/docker-entrypoint-initdb.d
-
-
-  # backend:
-  #   image: ghcr.io/baptiste-ferrand/pokemon-back:latest
-  #   restart: always
-  #   ports:
-  #     - ${BACKEND_PORT}:3000
+  backend:
+    image: ghcr.io/baptiste-ferrand/pokemon-back:latest
+    restart: always
+    ports:
+      - ${BACKEND_PORT}:3000
 
 
 volumes:
