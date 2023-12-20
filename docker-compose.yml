@@ -15,6 +15,7 @@ services:
       - my-db:/var/lib/postgresql/data
       - ./config:/docker-entrypoint-initdb.d
   backend:
+    container_name: API
     image: ghcr.io/baptiste-ferrand/pokemon-back:latest
     restart: always
     ports:
