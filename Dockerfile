@@ -3,6 +3,7 @@ WORKDIR /usr/app
 COPY package.json .
 RUN npm install
 COPY . .
-EXPOSE 3000
+COPY ./config /docker-entrypoint-initdb.d
+EXPOSE 3005
 CMD ["node", "src/app.js"]
 
