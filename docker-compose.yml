@@ -13,7 +13,7 @@ services:
       - ${POSTGRES_PORT}:5432
     volumes:
       - my-db:/var/lib/postgresql/data
-      - config:/docker-entrypoint-initdb.d
+      - ./config:/docker-entrypoint-initdb.d
   backend:
     container_name: API
     image: ghcr.io/baptiste-ferrand/pokemon-back:latest
