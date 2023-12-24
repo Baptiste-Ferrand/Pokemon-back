@@ -19,7 +19,7 @@ services:
     image: ghcr.io/baptiste-ferrand/pokemon-back:latest
     restart: always
     ports:
-      - ${BACKEND_PORT}:3000
+      - 3005:3005
   frontend:
     container_name: FRONT
     image: ghcr.io/baptiste-ferrand/pokemon-front:latest
